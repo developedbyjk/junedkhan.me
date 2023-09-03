@@ -23,7 +23,7 @@ function App() {
             <nav>
 
             <div class="logo">
-            <a href="index.html"><p>👨‍💻@developedbyjk</p></a>
+            <a href="index.html"><p>👨‍💻@developedbyjk </p></a>
             </div>
 
             <ul className={isNavVisible ? 'show' : ''}>
