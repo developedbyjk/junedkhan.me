@@ -1,31 +1,213 @@
-.App {
-  text-align: center;
+
+
+
+/* style for nav section */
+.logo{
+    display: flex;
+    /* background-color: yellow; */
+    align-items: center;
+    padding-right: 10%;
+    color: rgb(63, 63, 63);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+nav{
+    /* background-color: black; */
+    border-bottom: 1px solid black;
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    font-family: 'Space Grotesk', sans-serif;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+nav ul li {
+    display:inline-block;
+    padding: 12px;
+    /* background-color: yellow; */
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li a{
+    text-decoration: none;
+    color: rgb(63, 63, 63);
 }
 
-.heart {
-  color: #ff0000;
+/* style for hero section */
+.hero{
+    font-family: 'Space Grotesk', sans-serif;
+    /* background-color: yellow; */
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(63, 63, 63);
 }
 
-.small {
-  font-size: 0.75rem;
+.hero button{
+    padding: 12px 20px;
+    border-radius: 90px;
+    outline: 0;
+    border: none;
+    font-size: 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-top: 30px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
 }
+
+/* style for project section */
+.p-container{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Space Grotesk', sans-serif;
+    justify-content: center;
+    /* padding: auto; */
+    /* background-color: aqua; */
+    
+}
+.box h1{
+    /* background-color: yellow; */
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid grey;
+    font-size: 3rem;
+    
+    margin: 0px 0px 10px 0px;
+ 
+
+}
+.box{
+    /* padding: 10px 20px 20px 20px; */
+    height: auto;
+    max-width: 250px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 6px;
+    margin:  10px;
+}
+
+.box h2,p{
+    padding: 5px 20px;
+    
+}
+
+.box a{
+    
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bolder;
+    width: 90%;
+    display: block;
+    margin: 10px auto 20px auto;
+    padding: 10px;
+    border-radius: 90px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+/* hamburger menu */
+
+.hamburger-button {
+    display: none; /* Hide the button by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .hamburger-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+    transition: 0.4s;
+  }
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    /* Apply styles for screens up to 768px wide (tablets and smaller) */
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      padding: 20px 0;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    nav ul li {
+      padding: 10px 0;
+    }
+
+    .hamburger-button {
+        display: block; /* Show the hamburger button */
+      }
+    
+      nav ul {
+        /* Existing styles */
+        display: none; /* Hide the navigation list by default */
+      }
+    
+      nav ul.show {
+        height: 100%;
+        display: flex; /* Show the navigation list when the class is present */
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        background-color: white;
+        position: absolute;
+        top: 60px; /* Adjust this value based on your layout */
+        right: 0;
+        width: 100%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        background-color: white;
+        font-size: 1.5rem;
+   
+      }
+nav ul.show li{
+    border-bottom: 1px solid rgb(63, 63, 63);
+    margin: 30px 0px;
+}
+nav ul.show li:hover{
+    border: 1px solid rgb(63, 63, 63);
+}
+   
+/* Add this CSS at the end of your existing styles */
+.hamburger-line.cross:nth-child(1) {
+    transform: rotate(-45deg) translate(-2px, 9px);
+  }
+  
+  .hamburger-line.cross:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-line.cross:nth-child(3) {
+    transform: rotate(45deg) translate(-2px, -9px);
+  }
+
+
+  }
+
